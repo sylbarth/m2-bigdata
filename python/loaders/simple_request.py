@@ -7,4 +7,6 @@ import requests
 
 req = requests.get("http://www.floatrates.com/daily/usd.json")
 data = req.json()
+
 print(pd.DataFrame(data))
+print(pd.DataFrame(data)["brl"])
