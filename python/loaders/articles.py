@@ -10,6 +10,6 @@ def get_rss(url):
     return pd.DataFrame(posts, columns=['id', 'title', 'link', 'summary', 'published_parsed'])
 
 
-articles = get_rss("https://feeds.a.dj.com/rss/RSSOpinion.xml")
+articles = get_rss("https://services.lesechos.fr/rss/les-echos-economie.xml")
 
-print(articles)
+print(articles.iloc[0]["summary"])
