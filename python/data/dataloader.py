@@ -14,7 +14,6 @@ try:
         con.commit()
 except:
     print("Cannot delete table")
-    pass
 
 # lecture de la donnée pour une liste de tickers et stockage dans ohlcdata
 tickers = ["BTC-USD", "AAPL"]
