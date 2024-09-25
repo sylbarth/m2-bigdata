@@ -16,9 +16,9 @@ except:
     print("Cannot delete table")
 
 # lecture de la donnée pour une liste de tickers et stockage dans ohlcdata
-tickers = ["BTC-USD", "AAPL"]
+tickers = ["BTC-USD", "AAPL", "MSFT", "TSLA"]
 
 for ticker in tickers:
-    data = yfinance.download("BTC-USD").reset_index()
+    data = yfinance.download(ticker).reset_index()
     data["ticker"] = ticker
     data.to_sql(name="ohlcdata", con=engine, if_exists='append', index=False)
